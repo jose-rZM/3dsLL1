@@ -174,7 +174,7 @@ std::unordered_set<std::string>
 LL1Parser::PredictionSymbols(const std::string&              antecedent,
                              const std::vector<std::string>& consequent) {
     std::unordered_set<std::string> hd{};
-    First({consequent}, hd);
+    First(consequent, hd);
     if (!hd.contains(gr_.st_.EPSILON_)) {
         return hd;
     }
